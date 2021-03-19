@@ -1,0 +1,35 @@
+{
+  "name": "CHG",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "wdio wdio.conf.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dmitrii126776/CHG.git"
+  },
+  "keywords": [],
+  "author": "Dmitrii Kuzhilin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dmitrii126776/CHG/issues"
+  },
+  "homepage": "https://github.com/Dmitrii126776/CHG#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.13.10",
+    "@babel/core": "^7.13.10",
+    "@babel/preset-env": "^7.13.10",
+    "@babel/register": "^7.13.8",
+    "@wdio/cli": "^7.2.0",
+    "@wdio/cucumber-framework": "^7.2.0",
+    "@wdio/dot-reporter": "^7.2.0",
+    "@wdio/local-runner": "^7.2.0",
+    "@wdio/spec-reporter": "^7.2.0",
+    "@wdio/sync": "^7.2.0",
+    "chromedriver": "^89.0.0",
+    "cucumber": "^7.0.0-rc.0",
+    "wdio-chromedriver-service": "^7.0.0"
+  }
+}
