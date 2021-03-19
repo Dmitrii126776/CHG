@@ -129,9 +129,11 @@ exports.config = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter
-    reporters: ['spec'],
-
-
+    reporters: ['spec', ['allure', {
+        outputDir: 'allure-results',
+        disableWebdriverStepsReporting: true,
+        disableWebdriverScreenshotsReporting: false
+    }]],
     //
     // If you are using Cucumber you need to specify the location of your step definitions.
     cucumberOpts: {
@@ -232,6 +234,11 @@ exports.config = {
     /**
      * Runs after a Cucumber step
      */
+    afterStep: function (test, context, {error, result, duration, passed, retries}) {
+        if (error) {
+            browser.takeScreenshot();
+        }
+    },
     // afterStep: function (step, context) {
     // },
     /**
